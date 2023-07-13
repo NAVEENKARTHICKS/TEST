@@ -1,0 +1,7 @@
+ def mobilepostt(city,brand,model,name,mobile,email,address,pincode,date,description):
+        try:
+            data=Task1(city=city,brand=brand,model=model,name=name,mobile=mobile,email=email,address=address,pincode=pincode,date=date,description=description)
+            a=data.save()
+            print(a)
+        except NotUniqueError as e:
+            return ''
